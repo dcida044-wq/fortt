@@ -3,10 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import turnkeyImage from "@/assets/service-turnkey.jpg";
 import partitionsImage from "@/assets/service-partitions.jpg";
 import paintingImage from "@/assets/service-painting.jpg";
-import acousticImage from "@/assets/service-acoustic.jpg";
+import acousticImage from "@/assets/service-acoustic.avif";
 import waterproofingImage from "@/assets/service-waterproofing.jpg";
 import electricalImage from "@/assets/service-electrical.jpg";
-import decorationImage from "@/assets/service-decoration.jpg";
+import decorationImage from "@/assets/service-decoration.webp";
 import furnitureImage from "@/assets/service-furniture.jpg";
 
 const services = [
