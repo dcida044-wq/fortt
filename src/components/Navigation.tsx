@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoFortt from "@/assets/logo-fortt.webp";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +30,9 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <img src={logoFortt} alt="FORTT Construtora" className="h-10 md:h-12 w-auto" />
+          <div className="text-3xl font-montserrat font-black text-foreground">
+            FOR<span className="text-accent">TT</span>
+          </div>
         </div>
 
         {/* Desktop Navigation */}
