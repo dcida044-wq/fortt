@@ -1,4 +1,6 @@
 import { Target, Eye, Shield, Clock, Leaf, Award } from "lucide-react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { cn } from "@/lib/utils";
 
 const values = [
   {
@@ -90,27 +92,79 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {values.map((value, index) => (
-            <div
-              key={index}
-              className="bg-card border border-border hover:border-accent p-6 rounded-sm transition-all duration-300 group hover:shadow-[0_0_30px_rgba(255,195,0,0.15)]"
-            >
-              <value.icon
-                className="text-accent mb-4 group-hover:scale-110 transition-transform duration-300"
-                size={40}
-              />
-              <h4 className="font-montserrat font-bold text-xl text-foreground mb-3 group-hover:text-accent transition-colors duration-300">
-                {value.title}
-              </h4>
-              <p className="text-muted-foreground font-roboto leading-relaxed">
-                {value.description}
-              </p>
-            </div>
-          ))}
-        </div>
+        <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 max-w-7xl mx-auto">
+          <ValueGridItem
+            area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
+            icon={<Shield className="h-4 w-4" />}
+            title="Ética e Transparência"
+            description="Compromisso inabalável com a honestidade e clareza em todas as relações."
+          />
+          <ValueGridItem
+            area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
+            icon={<Award className="h-4 w-4" />}
+            title="Qualidade"
+            description="Padrões superiores de execução e acabamento em cada projeto."
+          />
+          <ValueGridItem
+            area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
+            icon={<Shield className="h-4 w-4" />}
+            title="Segurança"
+            description="Proteção máxima de colaboradores, clientes e património."
+          />
+          <ValueGridItem
+            area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
+            icon={<Clock className="h-4 w-4" />}
+            title="Compromisso com Prazos"
+            description="Cumprimento rigoroso dos cronogramas estabelecidos."
+          />
+          <ValueGridItem
+            area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
+            icon={<Leaf className="h-4 w-4" />}
+            title="Respeito ao Meio Ambiente"
+            description="Práticas sustentáveis e responsabilidade ambiental."
+          />
+        </ul>
       </div>
     </section>
+  );
+};
+
+interface ValueGridItemProps {
+  area: string;
+  icon: React.ReactNode;
+  title: string;
+  description: React.ReactNode;
+}
+
+const ValueGridItem = ({ area, icon, title, description }: ValueGridItemProps) => {
+  return (
+    <li className={cn("min-h-[14rem] list-none", area)}>
+      <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
+        <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+          borderWidth={3}
+        />
+        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] bg-card p-6 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] md:p-6">
+          <div className="relative flex flex-1 flex-col justify-between gap-3">
+            <div className="w-fit rounded-lg border-[0.75px] border-accent/30 bg-muted p-2">
+              {icon}
+            </div>
+            <div className="space-y-3">
+              <h3 className="pt-0.5 text-xl leading-[1.375rem] font-semibold font-montserrat tracking-[-0.04em] md:text-2xl md:leading-[1.875rem] text-balance text-foreground">
+                {title}
+              </h3>
+              <h2 className="font-roboto text-sm leading-[1.125rem] md:text-base md:leading-[1.375rem] text-muted-foreground">
+                {description}
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
   );
 };
 
