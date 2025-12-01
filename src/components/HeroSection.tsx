@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
+import { Spotlight } from "@/components/ui/spotlight";
 import heroImage from "@/assets/hero-construction.jpg";
 
 const HeroSection = () => {
@@ -21,6 +22,11 @@ const HeroSection = () => {
         backgroundAttachment: "fixed",
       }}
     >
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="hsl(var(--fortt-yellow))"
+      />
+      
       <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-in fade-in slide-in-from-bottom-8 duration-1000">
           <div className="inline-flex items-center space-x-2 bg-secondary/50 backdrop-blur-sm px-6 py-3 rounded-full mb-8 border border-accent/20">
