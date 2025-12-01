@@ -1,8 +1,13 @@
-import { Key, LayoutGrid, Paintbrush, Volume2, Droplets, Zap, Palette, Layers } from "lucide-react";
+import { Key, LayoutGrid, Paintbrush, Volume2, Droplets, Zap, Palette, Wrench } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import civilImage from "@/assets/service-civil.jpg";
-import renovationImage from "@/assets/service-renovation.jpg";
-import architectureImage from "@/assets/service-architecture.jpg";
+import turnkeyImage from "@/assets/service-turnkey.jpg";
+import partitionsImage from "@/assets/service-partitions.jpg";
+import paintingImage from "@/assets/service-painting.jpg";
+import acousticImage from "@/assets/service-acoustic.jpg";
+import waterproofingImage from "@/assets/service-waterproofing.jpg";
+import electricalImage from "@/assets/service-electrical.jpg";
+import decorationImage from "@/assets/service-decoration.jpg";
+import furnitureImage from "@/assets/service-furniture.jpg";
 
 const services = [
   {
@@ -10,49 +15,56 @@ const services = [
     title: "Construção Chave na Mão",
     description:
       "Projeto completo do início ao fim, entregamos o seu espaço pronto a habitar sem preocupações.",
-    image: civilImage,
+    image: turnkeyImage,
   },
   {
     icon: LayoutGrid,
     title: "Divisórias",
     description:
       "Instalação de divisórias em pladur, vidro ou outros materiais para otimizar espaços.",
-    image: renovationImage,
+    image: partitionsImage,
   },
   {
     icon: Paintbrush,
     title: "Pinturas",
     description:
       "Serviços de pintura interior e exterior com acabamentos de alta qualidade.",
-    image: architectureImage,
+    image: paintingImage,
   },
   {
     icon: Volume2,
     title: "Isolamento Acústico",
     description:
       "Soluções de insonorização para garantir conforto e privacidade nos seus espaços.",
-    image: renovationImage,
+    image: acousticImage,
   },
   {
     icon: Droplets,
     title: "Impermeabilização",
     description:
       "Proteção contra infiltrações e humidade em coberturas, varandas e fachadas.",
-    image: civilImage,
+    image: waterproofingImage,
   },
   {
     icon: Zap,
     title: "Elétrica",
     description:
       "Instalações elétricas completas, reparações e modernização de sistemas.",
-    image: architectureImage,
+    image: electricalImage,
   },
   {
     icon: Palette,
     title: "Revestimentos e Decorações",
     description:
       "Aplicação de revestimentos e soluções decorativas para valorizar os seus ambientes.",
-    image: renovationImage,
+    image: decorationImage,
+  },
+  {
+    icon: Wrench,
+    title: "Montagem de Móveis",
+    description:
+      "Serviço profissional de montagem e instalação de móveis para casa e escritório.",
+    image: furnitureImage,
   },
 ];
 
