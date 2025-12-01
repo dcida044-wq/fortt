@@ -1,4 +1,4 @@
-import { Building2, Hammer, Home, Ruler, HardHat, ClipboardCheck } from "lucide-react";
+import { Key, LayoutGrid, Paintbrush, Volume2, Droplets, Zap, Palette, Layers } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import civilImage from "@/assets/service-civil.jpg";
 import renovationImage from "@/assets/service-renovation.jpg";
@@ -6,46 +6,53 @@ import architectureImage from "@/assets/service-architecture.jpg";
 
 const services = [
   {
-    icon: Building2,
-    title: "Construção Civil",
+    icon: Key,
+    title: "Construção Chave na Mão",
     description:
-      "Obras novas de raiz, incluindo estruturas, acabamentos e infraestruturas completas.",
+      "Projeto completo do início ao fim, entregamos o seu espaço pronto a habitar sem preocupações.",
     image: civilImage,
   },
   {
-    icon: Hammer,
-    title: "Remodelações e Restaurações",
+    icon: LayoutGrid,
+    title: "Divisórias",
     description:
-      "Transformação de espaços interiores e exteriores, modernização e recuperação de edifícios.",
+      "Instalação de divisórias em pladur, vidro ou outros materiais para otimizar espaços.",
     image: renovationImage,
   },
   {
-    icon: Home,
-    title: "Reabilitação Urbana",
+    icon: Paintbrush,
+    title: "Pinturas",
     description:
-      "Intervenção em edifícios antigos ou degradados, valorizando o património e revitalizando áreas urbanas.",
-    image: renovationImage,
-  },
-  {
-    icon: Ruler,
-    title: "Projetos de Arquitetura e Interiores",
-    description:
-      "Concepção, design e planeamento de projetos habitacionais, comerciais e de interiores.",
+      "Serviços de pintura interior e exterior com acabamentos de alta qualidade.",
     image: architectureImage,
   },
   {
-    icon: HardHat,
-    title: "Serviços de Engenharia",
+    icon: Volume2,
+    title: "Isolamento Acústico",
     description:
-      "Consultoria técnica, gestão de projeto, cálculos estruturais e soluções de engenharia.",
+      "Soluções de insonorização para garantir conforto e privacidade nos seus espaços.",
+    image: renovationImage,
+  },
+  {
+    icon: Droplets,
+    title: "Impermeabilização",
+    description:
+      "Proteção contra infiltrações e humidade em coberturas, varandas e fachadas.",
     image: civilImage,
   },
   {
-    icon: ClipboardCheck,
-    title: "Fiscalização de Obra",
+    icon: Zap,
+    title: "Elétrica",
     description:
-      "Controlo de qualidade, cumprimento de prazos e gestão orçamental rigorosa em todas as fases da construção.",
+      "Instalações elétricas completas, reparações e modernização de sistemas.",
     image: architectureImage,
+  },
+  {
+    icon: Palette,
+    title: "Revestimentos e Decorações",
+    description:
+      "Aplicação de revestimentos e soluções decorativas para valorizar os seus ambientes.",
+    image: renovationImage,
   },
 ];
 
