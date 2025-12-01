@@ -77,7 +77,7 @@ const Footer = () => {
                   +351 939 855 248
                 </a>
               </li>
-              <li>Braga, Portugal</li>
+              <li>Algés, Portugal</li>
             </ul>
           </div>
         </div>

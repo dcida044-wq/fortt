@@ -107,9 +107,8 @@ const ContactSection = () => {
                     Morada
                   </h3>
                   <p className="text-muted-foreground font-roboto leading-relaxed">
-                    Rua Marquês de Pombal, Lote 5<br />
-                    Escritório 2A<br />
-                    4700-123 Braga, Portugal
+                    Av. dos Combatentes da Grande Guerra, nº 123<br />
+                    1495-036 Algés, Portugal
                   </p>
                 </div>
               </div>
