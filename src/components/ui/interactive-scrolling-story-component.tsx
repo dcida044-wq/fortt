@@ -5,29 +5,21 @@ const slidesData = [
     title: "Construção Chave na Mão",
     description: "Desenvolvemos projetos completos do início ao fim. Desde a conceção até à entrega final, garantimos uma execução impecável com os mais altos padrões de qualidade.",
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop",
-    bgColor: "#fff100",
-    textColor: "#000000",
   },
   {
     title: "Remodelações de Excelência",
     description: "Transformamos espaços existentes em ambientes modernos e funcionais. A nossa equipa especializada garante renovações que respeitam a estrutura original.",
     image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2070&auto=format&fit=crop",
-    bgColor: "#fff100",
-    textColor: "#000000",
   },
   {
     title: "Acabamentos de Qualidade",
     description: "Os detalhes fazem a diferença. Oferecemos acabamentos premium que elevam qualquer projeto, desde revestimentos de luxo a pinturas especializadas.",
     image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2070&auto=format&fit=crop",
-    bgColor: "#fff100",
-    textColor: "#000000",
   },
   {
     title: "Projetos Personalizados",
     description: "Cada cliente é único. Desenvolvemos soluções à medida das suas necessidades, com acompanhamento dedicado em todas as fases do projeto.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
-    bgColor: "#fff100",
-    textColor: "#000000",
   },
 ];
 
@@ -54,12 +46,6 @@ export function ScrollingFeatureShowcase() {
     return () => container.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const dynamicStyles = {
-    backgroundColor: slidesData[activeIndex].bgColor,
-    color: slidesData[activeIndex].textColor,
-    transition: 'background-color 0.7s ease, color 0.7s ease',
-  };
-
   const gridPatternStyle: React.CSSProperties = {
     backgroundImage: `
       linear-gradient(to right, rgba(0, 0, 0, 0.12) 1px, transparent 1px),
@@ -80,8 +66,7 @@ export function ScrollingFeatureShowcase() {
   return (
     <div
       ref={scrollContainerRef}
-      className="h-screen overflow-y-scroll scroll-smooth"
-      style={dynamicStyles}
+      className="h-screen overflow-y-scroll scroll-smooth bg-background text-foreground"
     >
       <div className="h-[400vh]">
         <div
@@ -96,12 +81,12 @@ export function ScrollingFeatureShowcase() {
                 
                 {/* Pagination Bars */}
                 <div className="flex items-center gap-2">
-                  {slidesData.map((_, index) => (
+                {slidesData.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => handlePaginationClick(index)}
                       className={`h-1 rounded-full transition-all duration-500 ease-in-out ${
-                        index === activeIndex ? 'w-12 bg-black/80' : 'w-6 bg-black/20'
+                        index === activeIndex ? 'w-12 bg-primary' : 'w-6 bg-muted-foreground/30'
                       }`}
                       aria-label={`Ir para slide ${index + 1}`}
                     />
@@ -119,10 +104,10 @@ export function ScrollingFeatureShowcase() {
                           : 'opacity-0 translate-y-8 pointer-events-none'
                       }`}
                     >
-                      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-montserrat mb-4">
+                      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-montserrat mb-4 text-foreground">
                         {slide.title}
                       </h2>
-                      <p className="text-lg md:text-xl opacity-80 leading-relaxed">
+                      <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                         {slide.description}
                       </p>
                     </div>
@@ -133,7 +118,7 @@ export function ScrollingFeatureShowcase() {
                 <div className="pt-4">
                   <a
                     href="#contacto"
-                    className="inline-block px-8 py-4 bg-black text-white font-semibold rounded-full hover:bg-black/80 transition-colors duration-300"
+                    className="inline-block px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-colors duration-300"
                   >
                     Pedir Orçamento
                   </a>
@@ -142,10 +127,10 @@ export function ScrollingFeatureShowcase() {
 
               {/* Right Column: Image with Grid Background */}
               <div
-                className="relative h-[50vh] lg:h-[70vh] rounded-3xl overflow-hidden order-1 lg:order-2"
+                className="relative h-[50vh] lg:h-[70vh] rounded-3xl overflow-hidden order-1 lg:order-2 bg-secondary"
                 style={gridPatternStyle}
               >
-                <div className="absolute inset-4 md:inset-8 rounded-2xl overflow-hidden shadow-2xl">
+                <div className="absolute inset-4 md:inset-8 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-primary/20">
                   <div className="relative w-full h-full">
                     {slidesData.map((slide, index) => (
                       <div
