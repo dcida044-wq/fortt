@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import ParallaxScrollFeatureSection from "@/components/ui/parallax-scroll-feature-section";
+import { ScrollingFeatureShowcase } from "@/components/ui/interactive-scrolling-story-component";
 import Spline3DSection from "@/components/Spline3DSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
@@ -14,7 +14,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <ServicesSection />
-        <ParallaxScrollFeatureSection />
+        <ScrollingFeatureShowcase />
         <Spline3DSection />
         <AboutSection />
         <ContactSection />
