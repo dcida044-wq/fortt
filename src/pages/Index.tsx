@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import { VideoScrollHero } from "@/components/ui/video-scroll-hero";
+import { ProcessTimeline } from "@/components/ui/process-timeline";
 import Spline3DSection from "@/components/Spline3DSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
@@ -14,7 +14,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <ServicesSection />
-        <VideoScrollHero />
+        <ProcessTimeline />
         <Spline3DSection />
         <AboutSection />
         <ContactSection />
