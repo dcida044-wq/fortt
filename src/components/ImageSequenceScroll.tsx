@@ -174,7 +174,7 @@ export default function ImageSequenceScroll() {
     <section
       ref={containerRef}
       className="relative w-full bg-background"
-      style={{ height: "400vh" }}
+      style={{ height: "600vh" }}
       aria-label="Sequência de imagens com scroll"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
